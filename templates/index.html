@@ -1,0 +1,101 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <p>Enter patient details to predict heart disease risk</p>
+        
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="trestbps">Resting Blood Pressure:</label>
+                <input type="number" id="trestbps" name="trestbps" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="chol">Serum Cholesterol (mg/dl):</label>
+                <input type="number" id="chol" name="chol" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fbs">Fasting Blood Sugar > 120 mg/dl:</label>
+                <select id="fbs" name="fbs" required>
+                    <option value="0">False</option>
+                    <option value="1">True</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="restecg">Resting Electrocardiographic Results:</label>
+                <select id="restecg" name="restecg" required>
+                    <option value="normal">Normal</option>
+                    <option value="lv hypertrophy">LV Hypertrophy</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="thalch">Maximum Heart Rate Achieved:</label>
+                <input type="number" id="thalch" name="thalch" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="exang">Exercise Induced Angina:</label>
+                <select id="exang" name="exang" required>
+                    <option value="False">No</option>
+                    <option value="True">Yes</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="oldpeak">ST Depression Induced by Exercise:</label>
+                <input type="number" step="0.1" id="oldpeak" name="oldpeak" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="slope">Slope of Peak Exercise ST Segment:</label>
+                <select id="slope" name="slope" required>
+                    <option value="upsloping">Upsloping</option>
+                    <option value="flat">Flat</option>
+                    <option value="downsloping">Downsloping</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="ca">Number of Major Vessels Colored by Fluoroscopy:</label>
+                <input type="number" id="ca" name="ca" min="0" max="3" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex" required>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="cp">Chest Pain Type:</label>
+                <select id="cp" name="cp" required>
+                    <option value="typical angina">Typical Angina</option>
+                    <option value="atypical angina">Atypical Angina</option>
+                    <option value="non-anginal">Non-Anginal Pain</option>
+                    <option value="asymptomatic">Asymptomatic</option>
+                </select>
+            </div>
+            
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
