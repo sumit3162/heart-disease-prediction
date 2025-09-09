@@ -164,7 +164,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - [Shinganesumit80@gmail.com](mailto:Shinganesumit80@gmail.com)
+ [Shinganesumit80@gmail.com](mailto:Shinganesumit80@gmail.com)
 
 Project Link: [https://github.com/sumit3162/heart-disease-prediction](https://github.com/sumit3162/heart-disease-prediction)
 
